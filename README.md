@@ -1,3 +1,5 @@
+### If you use this, give this a star to keep it live
+
 Rules are checked for updates every hour, and automatically updated here.
 
 Direct link: `https://raw.githubusercontent.com/deviint/onlyfans-dynamic-rules/main/dynamicRules.json`
