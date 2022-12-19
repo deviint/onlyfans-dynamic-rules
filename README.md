@@ -4,9 +4,10 @@ Direct link: `https://raw.githubusercontent.com/deviint/onlyfans-dynamic-rules/m
 
 Usage (JavaScript)
 ```javascript
+const time = +new Date()
 const msg = [
     dynamicRules["static_param"],
-    +new Date(),
+    time,
     url,
     userId
 ].join("\n")
