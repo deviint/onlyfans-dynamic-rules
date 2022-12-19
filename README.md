@@ -20,4 +20,4 @@ const sign = [dynamicRules["start"], shaHash, Math.abs(checksum), dynamicRules["
 ```
 
 
-coders who want to build OF tools dm twitter.com/onlyfansrich
+coders who want to build OF tools dm @onlyfansrich[https://twitter.com/onlyfansrich]
