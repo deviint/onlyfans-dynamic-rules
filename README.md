@@ -17,7 +17,7 @@ const shaHash = sha1(msg);
 const hashAscii = Buffer.from(shaHash, 'ascii');
 
 const checksum = dynamicRules["checksum_indexes"].reduce((result, value) => result + hashAscii[value], 0) + dynamicRules["checksum_constant"];
-const sign = [dynamicRules["start"], shaHash, Math.abs(checksum), dynamicRules["end"]].join(":")
+const sign = [dynamicRules["start"], shaHash, Math.abs(checksum).toString(16), dynamicRules["end"]].join(":")
 // output: {sign, time}
 ```
 
