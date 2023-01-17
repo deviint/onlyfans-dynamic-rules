@@ -6,6 +6,6 @@
 	"checksum_indexes": [0, 0, 1, 2, 2, 5, 7, 10, 11, 11, 11, 13, 15, 15, 15, 19, 21, 21, 21, 26, 27, 27, 28, 29, 29, 30, 35, 37, 37, 37, 38, 39],
 	"app_token": "33d57ade8c02dbc5a333db99ff9ae26a",
 	"remove_headers": ["user_id"],
-	"revision": undefined,
+	"revision": "202301161743-8c48941bec",
 	"is_current": true
 }
