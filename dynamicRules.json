@@ -1,11 +1,11 @@
 {
-	"static_param": "JQJtlmKr4vBa0De9lunKYbZmKxl4IzZt",
-	"start": "7984",
-	"end": "643ff3f7",
-	"checksum_constant": 937,
-	"checksum_indexes": [1, 1, 2, 6, 9, 10, 11, 12, 13, 14, 14, 16, 17, 19, 19, 20, 20, 20, 23, 25, 25, 25, 25, 27, 28, 29, 30, 31, 32, 33, 37, 37],
+	"static_param": "MU1ZVecllkqxuztGv3kYWEnsQEc9M5QS",
+	"start": "8007",
+	"end": "64416ab3",
+	"checksum_constant": -1130,
+	"checksum_indexes": [0, 2, 2, 5, 6, 7, 10, 11, 12, 15, 15, 17, 19, 19, 20, 21, 21, 21, 22, 24, 24, 24, 27, 28, 31, 32, 33, 34, 35, 37, 38, 39],
 	"app_token": "33d57ade8c02dbc5a333db99ff9ae26a",
 	"remove_headers": ["user_id"],
-	"revision": "202304191359-e2ee24f430",
+	"revision": "202304201638-ebf95106c5",
 	"is_current": true
 }
