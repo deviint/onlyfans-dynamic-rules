@@ -7,10 +7,11 @@ Direct link: `https://raw.githubusercontent.com/deviint/onlyfans-dynamic-rules/m
 Usage (JavaScript)
 ```javascript
 const time = +new Date()
+const url = new URL(fullUrl)
 const msg = [
     dynamicRules["static_param"],
     time,
-    url,
+    url.path + url.query,
     userId
 ].join("\n")
 const shaHash = sha1(msg);
