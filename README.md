@@ -23,5 +23,5 @@ const sign = [dynamicRules["start"], shaHash, Math.abs(checksum).toString(16), d
 ```
 
 
-For OnlyFans API inquiries, OnlyFans consulting, OnlyFans product/server advice DM me [@onlyfansrich ![@onlyfansrich](https://img.icons8.com/color/18/twitter--v1.png)](http://twitter.com/onlyfansrich)
+For OnlyFans API inquiries, OnlyFans consulting, OnlyFans product/service advice DM me [@onlyfansrich ![@onlyfansrich](https://img.icons8.com/color/18/twitter--v1.png)](http://twitter.com/onlyfansrich)
 I have deep and extensive knowledge of all things related to OnlyFans' inner workings and API.
