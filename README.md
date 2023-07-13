@@ -1,6 +1,10 @@
-### If you use this, give this repo a star to keep it live
+# If you use this, give this repo a star to keep it live
 
-Rules are checked for updates every hour.
+This free version is updated every hour-ish.
+
+*(If your use case requires the latest signing values, check https://ofapi.xyz)*
+
+-----------------
 
 Direct link: `https://raw.githubusercontent.com/deviint/onlyfans-dynamic-rules/main/dynamicRules.json`
 
@@ -21,7 +25,7 @@ const checksum = dynamicRules["checksum_indexes"].reduce((result, value) => resu
 const sign = [dynamicRules["start"], shaHash, Math.abs(checksum).toString(16), dynamicRules["end"]].join(":")
 // output: {sign, time}
 ```
+-----------------
 
-
-For OnlyFans API inquiries, OnlyFans consulting, OnlyFans product/service advice DM me [@onlyfansrich ![@onlyfansrich](https://img.icons8.com/color/18/twitter--v1.png)](http://twitter.com/onlyfansrich)
-I have deep and extensive knowledge of all things related to OnlyFans' inner workings and API.
+> For OnlyFans API inquiries, OnlyFans consulting, OnlyFans product/service advice DM me [@onlyfansrich ![@onlyfansrich](https://img.icons8.com/color/18/twitter--v1.png)](http://twitter.com/onlyfansrich).
+> I have deep and extensive knowledge of all things related to OnlyFans' inner workings and API.
