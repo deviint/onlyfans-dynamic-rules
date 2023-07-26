@@ -1,14 +1,14 @@
 {
-	"static_param": "MgFcLSXBAEyLHfUOvKxTKB59wrPOPRH4",
-	"start": "9259",
-	"end": "64c00033",
-	"checksum_constant": 194,
-	"checksum_indexes": [0, 0, 3, 7, 7, 8, 11, 11, 14, 16, 17, 18, 23, 24, 24, 24, 25, 25, 25, 26, 27, 28, 29, 29, 31, 32, 32, 33, 34, 36, 39, 39],
+	"static_param": "x8yJrJYufXROvjE1MtHGnyw0YRtLrlDc",
+	"start": "9271",
+	"end": "64c10971",
+	"checksum_constant": 954,
+	"checksum_indexes": [0, 4, 4, 6, 7, 10, 10, 10, 12, 12, 14, 15, 15, 16, 16, 18, 19, 20, 20, 21, 21, 23, 26, 28, 30, 31, 31, 35, 37, 38, 38, 39],
 	"app_token": "33d57ade8c02dbc5a333db99ff9ae26a",
 	"remove_headers": ["user_id"],
-	"revision": "202307251701-e2e6fd31c6",
+	"revision": "202307261153-5da96beeb3",
 	"is_current": null,
-	"format": "9259:{}:{:x}:64c00033",
-	"prefix": "9259",
-	"suffix": "64c00033"
+	"format": "9271:{}:{:x}:64c10971",
+	"prefix": "9271",
+	"suffix": "64c10971"
 }
