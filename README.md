@@ -15,7 +15,7 @@ const url = new URL(fullUrl)
 const msg = [
     dynamicRules["static_param"],
     time,
-    url.path + url.query,
+    url.pathname + url.search,
     userId
 ].join("\n")
 const shaHash = sha1(msg);
