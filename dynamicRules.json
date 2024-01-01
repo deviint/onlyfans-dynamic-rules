@@ -1,14 +1,14 @@
 {
-	"static_param": "Bl61R8sfp81TCar2oVYWMPWse9eiAWWz",
-	"start": "17009",
-	"end": "65911b03",
-	"checksum_constant": -385,
-	"checksum_indexes": [7, 7, 7, 8, 9, 10, 10, 11, 13, 14, 15, 16, 16, 16, 18, 19, 20, 21, 23, 25, 26, 29, 30, 32, 33, 33, 34, 35, 35, 36, 37, 38],
+	"static_param": "1oJjIU37hsSIQbCnfSR6ikPCU6NLmEvI",
+	"start": "17055",
+	"end": "659258f1",
+	"checksum_constant": -472,
+	"checksum_indexes": [3, 6, 8, 8, 10, 11, 12, 12, 12, 14, 15, 18, 18, 20, 23, 24, 24, 24, 24, 26, 27, 29, 32, 32, 32, 33, 34, 35, 36, 37, 37, 39],
 	"app_token": "33d57ade8c02dbc5a333db99ff9ae26a",
 	"remove_headers": ["user_id"],
-	"revision": "202312310740-45ea95b708",
+	"revision": "202401010616-45ea95b708",
 	"is_current": null,
-	"format": "17009:{}:{:x}:65911b03",
-	"prefix": "17009",
-	"suffix": "65911b03"
+	"format": "17055:{}:{:x}:659258f1",
+	"prefix": "17055",
+	"suffix": "659258f1"
 }
