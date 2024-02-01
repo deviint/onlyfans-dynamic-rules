@@ -9,17 +9,17 @@ class OFAPI:
 
     # Method to check token balance
     def checkTokenBalance(self):
-        response = requests.get(self._baseUrl + "/balance", headers={'api_key': self._apiKey})
+        response = requests.get(self._baseUrl + "/balance", headers={'api-key': self._apiKey})
         return response.json()
 
     # Method to get rules
     def getRules(self):
-        response = requests.get(self._baseUrl + "/rules", headers={'api_key': self._apiKey})
+        response = requests.get(self._baseUrl + "/rules", headers={'api-key': self._apiKey})
         return response.json()
 
     # Method to sign a request
     def signRequest(self, data):
-        response = requests.post(self._baseUrl + "/sign", headers={'api_key': self._apiKey, 'Content-Type': 'application/json'}, data=json.dumps(data))
+        response = requests.post(self._baseUrl + "/sign", headers={'api-key': self._apiKey, 'Content-Type': 'application/json'}, data=json.dumps(data))
         return response.json()
 
     # Wrapper function to fetch data from any URL
