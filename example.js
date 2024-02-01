@@ -11,7 +11,7 @@ class OFAPI {
     async checkTokenBalance() {
         const response = await fetch(this._baseUrl + `/balance`, {
             headers: {
-                'api_key': this._apiKey
+                'api-key': this._apiKey
             }
         });
         return response.json();
@@ -21,7 +21,7 @@ class OFAPI {
     async getRules() {
         const response = await fetch(this._baseUrl + `/rules`, {
             headers: {
-                'api_key': this._apiKey
+                'api-key': this._apiKey
             }
         });
         return response.json();
@@ -32,7 +32,7 @@ class OFAPI {
         const response = await fetch(this._baseUrl + `/sign`, {
             method: 'POST',
             headers: {
-                'api_key': this._apiKey,
+                'api-key': this._apiKey,
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(data)
