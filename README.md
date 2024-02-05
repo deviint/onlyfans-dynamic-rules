@@ -1,6 +1,6 @@
 # If you use this, give this repo a star to keep it live
 
-This free version is updated every hour-ish.
+This free version is updated regularly, but the schedule is not tied to when the values are changed.
 
 *(If your use case requires the latest signing values, check https://ofapi.xyz)*
 
