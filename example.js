@@ -4,14 +4,14 @@
 class OFAPI {
     constructor(apiKey) {
         this._apiKey = apiKey;
-        this._baseUrl = "https://ofapi.xyz";
+        this._baseUrl = "https://ofapi.xyz/api";
     }
 
     // Method to check token balance
     async checkTokenBalance() {
         const response = await fetch(this._baseUrl + `/balance`, {
             headers: {
-                'api-key': this._apiKey
+                'apiKey': this._apiKey
             }
         });
         return response.json();
@@ -21,21 +21,21 @@ class OFAPI {
     async getRules() {
         const response = await fetch(this._baseUrl + `/rules`, {
             headers: {
-                'api-key': this._apiKey
+                'apiKey': this._apiKey
             }
         });
         return response.json();
     }
 
     // Method to sign a request
-    async signRequest(data) {
+    async signRequest(endpoint) {
         const response = await fetch(this._baseUrl + `/sign`, {
             method: 'POST',
             headers: {
-                'api-key': this._apiKey,
+                'apiKey': this._apiKey,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify({endpoint: endpoint})
         });
         return response.json();
     }
@@ -43,15 +43,11 @@ class OFAPI {
     // Wrapper function to fetch data from any URL
     async fetch(url, userData) {
         // Sign the request first
-        const signedHeaders = await this.signRequest({
-            url: url,
-            method: 'GET',
-            ...userData
-        });
+        const signedHeaders = await this.signRequest(url);
 
         // Fetch the OF API data using the signed headers
         const response = await fetch(url, {
-            headers: signedHeaders
+            headers: {...signedHeaders, ...userData}
         });
 
         return response.json();
@@ -65,10 +61,9 @@ const ofapi = new OFAPI("MY_API_KEY");
 const streams = await ofapi.fetch(
     "https://onlyfans.com/api2/v2/streams/feed?limit=10&skip_users=all", 
     {
-        xbc: '8g6756r78hioe45e65tuhads12',
-        sess: '37892uhdfoskjdsiagyiqewads1',
-        user_id: '123456789',
-        user_agent: 'Mozilla .........'
+        "x-bc": '8g6756r78hioe45e65tuhads12',
+        cookie: 'sess=37892uhdfoskjdsiagyiqewads1',
+        "user-agent": 'Mozilla .........'
     }
 )
 
