@@ -31,4 +31,3 @@ const sign = [dynamicRules["start"], shaHash, Math.abs(checksum).toString(16), d
 > I have extensive knowledge of all things related to OnlyFans' inner workings and API.
 
 [@onlyfansrich ![@onlyfansrich](https://img.icons8.com/color/18/twitter--v1.png)](http://twitter.com/onlyfansrich)
-<a href="https://www.buymeacoffee.com/deviint" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
