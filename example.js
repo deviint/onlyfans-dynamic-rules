@@ -4,17 +4,7 @@
 class OFAPI {
     constructor(apiKey) {
         this._apiKey = apiKey;
-        this._baseUrl = "https://ofapi.xyz/api";
-    }
-
-    // Method to check token balance
-    async checkTokenBalance() {
-        const response = await fetch(this._baseUrl + `/balance`, {
-            headers: {
-                'apiKey': this._apiKey
-            }
-        });
-        return response.json();
+        this._baseUrl = "https://api.ofapi.xyz";
     }
 
     // Method to get rules
