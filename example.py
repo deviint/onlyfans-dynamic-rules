@@ -4,17 +4,8 @@ import json
 class OFAPI:
     def __init__(self, api_key):
         self._api_key = api_key
-        self._base_url = "https://ofapi.xyz/api"
+        self._base_url = "https://api.ofapi.xyz"
     
-    def check_token_balance(self):
-        try:
-            response = requests.get(f"{self._base_url}/balance", headers={'apiKey': self._api_key})
-            response.raise_for_status()
-            return response.json()
-        except requests.exceptions.RequestException as e:
-            print(f"Error checking token balance: {e}")
-            return None
-
     def get_rules(self):
         try:
             response = requests.get(f"{self._base_url}/rules", headers={'apiKey': self._api_key})
