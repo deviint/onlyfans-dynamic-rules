@@ -1,9 +1,9 @@
 # If you use this, please give this repo a star to keep it live!
 
-This free version is maintained and updated a few days after OFAPI subscribers have received them.
+This free version is maintained and updated an hour or so after OFAPI subscribers have received them.
 
 - [Info about this repo](https://github.com/deviint/onlyfans-dynamic-rules/discussions/15)
-- If your use case requires the latest signing values, check out [<img src=".github/OFAPI.png" alt="OF API" width="10%">](https://ofapi.xyz)
+- If your use case requires the latest signing values, check out [<img src=".github/OFAPI.png" alt="OF API" width="10%">](https://ofauth.com)
 
 -----------------
 
