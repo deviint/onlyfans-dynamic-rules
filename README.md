@@ -28,9 +28,4 @@ const sign = [dynamicRules["start"], shaHash, Math.abs(checksum).toString(16), d
 ```
 -----------------
 
-> For OnlyFans API inquiries, OnlyFans consulting, OnlyFans product/service advice [email deviint@proton.me](mailto:deviint@proton.me) .
-> I have extensive knowledge of all things related to OnlyFans' inner workings and API.
-
-[@onlyfansrich ![@onlyfansrich](https://img.icons8.com/color/18/twitter--v1.png)](http://twitter.com/onlyfansrich)
-
 <img src="https://updates.ofauth.com/graph.svg">
