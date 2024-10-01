@@ -1,60 +1,72 @@
-// TODO: Implement error handling!
+// type Rules = {
+//     static_param: string
+//     checksum_indexes: number[]
+//     checksum_constant: number
+//     start: string
+//     end: string
+//     [key: string]: any ... the other keys
+// }
 
-// Example library to fetch data from the OF API
-class OFAPI {
-    constructor(apiKey) {
-        this._apiKey = apiKey;
-        this._baseUrl = "https://api.ofapi.xyz";
-    }
+// type Body = {
+//     endpoint: string
+//     "user-id"?: string
+//     time?: string
+// }
 
-    // Method to get rules
-    async getRules() {
-        const response = await fetch(this._baseUrl + `/rules`, {
-            headers: {
-                'apiKey': this._apiKey
-            }
-        });
-        return response.json();
-    }
+async function signRequest(rules, body) {
+    const time = body?.time || (+new Date()).toString()
+    const url = new URL(body.endpoint, "https://onlyfans.com")
 
-    // Method to sign a request
-    async signRequest(endpoint) {
-        const response = await fetch(this._baseUrl + `/sign`, {
-            method: 'POST',
-            headers: {
-                'apiKey': this._apiKey,
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({endpoint: endpoint})
-        });
-        return response.json();
-    }
+    const msg = [
+        rules["static_param"],
+        time,
+        url.pathname + url.search,
+        body?.["user-id"] || 0
+    ].join("\n")
+    const shaHash = sha1(msg);
+    const hashAscii = Buffer.from(shaHash, 'ascii');
 
-    // Wrapper function to fetch data from any URL
-    async fetch(url, userData) {
-        // Sign the request first
-        const signedHeaders = await this.signRequest(url);
+    const checksum = rules["checksum_indexes"].reduce((result, value) => result + hashAscii[value], 0) + rules["checksum_constant"];
+    const sign = [rules["start"], shaHash, Math.abs(checksum).toString(16), rules["end"]].join(":")
 
-        // Fetch the OF API data using the signed headers
-        const response = await fetch(url, {
-            headers: {...signedHeaders, ...userData}
-        });
-
-        return response.json();
+    return {
+        sign, time
     }
 }
 
+async function getRules() {
+    const res = await fetch("https://api.ofauth.com/rules", {
+        headers: {
+            "apiKey": process.env.OFAUTH_KEY
+        }
+    })
 
-const ofapi = new OFAPI("MY_API_KEY");
-
-// Example usage
-const streams = await ofapi.fetch(
-    "https://onlyfans.com/api2/v2/streams/feed?limit=10&skip_users=all", 
-    {
-        "x-bc": '8g6756r78hioe45e65tuhads12',
-        cookie: 'sess=37892uhdfoskjdsiagyiqewads1',
-        "user-agent": 'Mozilla .........'
+    if (res.status !== 200) {
+        throw new Error("Failed to fetch rules")
+    }else{
+        const data = await res.json()
+        return data.rules
     }
-)
+}
 
-// do something with the fetched data...
+const rules = await getRules()
+
+// type User = {
+//     id: string
+//     userAgent: string
+//     xbc: string
+// }
+export async function makeOFRequest(url, user) {
+    const sign = await signRequest(rules, {endpoint: url, "user-id": user.id})
+    const res = await fetch(url, {
+        headers: {
+            "access-token": rules.access_token,
+            "user-id": user.id,
+            "user-agent": user.userAgent,
+            "x-bc": user.xbc,
+            ...sign
+        }
+    })
+
+    return res
+}
