@@ -21,7 +21,3 @@ Direct link: `https://raw.githubusercontent.com/deviint/onlyfans-dynamic-rules/m
 ## Need help?
 
 For support or consulting, email [support@ofauth.com](mailto:support@ofauth.com).
-
-
-## Supported by
-[<img src="https://updates.ofauth.com/538.png" width="385px" height="100%"/>](https://suada.ai?utm_source=ofauth)
