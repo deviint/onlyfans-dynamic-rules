@@ -25,9 +25,9 @@
  * Signs a request to the OnlyFans API
  * @param {Rules} rules - The rules for signing the request
  * @param {Body} body - The request body
- * @returns {Promise<Sign>} The signed request
+ * @returns {Sign} The signed request
  */
-async function signRequest(rules, body) {
+function signRequest(rules, body) {
     const time = body?.time || (+new Date()).toString()
     const url = new URL(body.endpoint, "https://onlyfans.com")
 
@@ -83,7 +83,7 @@ export async function makeOFRequest(url, user) {
     const sign = await signRequest(rules, {endpoint: url, "user-id": user.id})
     const res = await fetch(url, {
         headers: {
-            "access-token": rules.access_token,
+            "app-token": rules.app_token,
             "user-id": user.id,
             "user-agent": user.userAgent,
             "x-bc": user.xbc,
